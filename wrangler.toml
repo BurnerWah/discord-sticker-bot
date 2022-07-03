@@ -1,0 +1,19 @@
+name = "discord-sticker-bot"
+main = "src/index.ts"
+compatibility_date = "2022-07-02"
+node_compat = true
+
+[env.dev]
+vars = { ENVIRONMENT = "dev" }
+
+[env.staging]
+vars = { ENVIRONMENT = "staging" }
+
+[env.production]
+vars = { ENVIRONMENT = "production" }
+
+# [secrets]
+# DISCORD_TOKEN
+# DISCORD_PUBLIC_KEY
+# DISCORD_APPLICATION_ID
+# DISCORD_TEST_GUILD_ID

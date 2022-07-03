@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "steoates.autoimport",
+    "ms-cst-e.vscode-devskim",
+    "dbaeumer.vscode-eslint",
+    "bungcip.better-toml",
+    "tamasfe.even-better-toml",
+    "bengreenier.vscode-node-readme",
+    "christian-kohler.npm-intellisense"
+  ]
+}
