@@ -13,9 +13,7 @@ app.use(logger())
 app.get('/register', registerEndpoint)
 
 app.get('*', async (ctx) => {
-  return ctx.text(`Hello World!
-My app ID is ${ctx.env.DISCORD_APPLICATION_ID}
-The rest of the env is ${JSON.stringify(ctx.env)}`)
+  return ctx.text(`Hello World!`)
 })
 
 app.post('/', async (ctx: Context<string, Env>) => {
@@ -34,8 +32,10 @@ app.post('/', async (ctx: Context<string, Env>) => {
     case InteractionType.APPLICATION_COMMAND:
       if (data) {
         const name = data.name.toLowerCase()
+        console.log(`Received command ${name}`)
+        console.log(`Command data: ${JSON.stringify(data)}`)
         const handler = commands.find((cmd) => cmd.name === name)?.handler
-        return handler ? handler(ctx) : err('Unknown command')
+        return handler ? handler(ctx, interaction) : err('Unknown command')
       }
   }
 
