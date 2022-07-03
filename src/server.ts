@@ -43,4 +43,3 @@ app.post('/', async (ctx: Context<string, Env>) => {
 })
 
 export default app
-0
