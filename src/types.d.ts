@@ -1,5 +1,6 @@
 import { ApplicationCommandOptionType } from 'discord-api-types/v10'
 import { InteractionType } from 'discord-interactions'
+import { Context, Env } from 'hono'
 
 interface Interaction {
   type: InteractionType
