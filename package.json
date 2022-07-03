@@ -2,13 +2,6 @@
   "name": "discord-sticker-bot",
   "version": "0.0.0",
   "private": true,
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "typescript",
-      "prettier"
-    ]
-  },
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler publish",
@@ -31,6 +24,10 @@
     "eslint": "^8.19.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-typescript": "^3.0.0",
+    "eslint-plugin-github": "^4.3.6",
+    "eslint-plugin-optimize-regex": "^1.2.1",
+    "eslint-plugin-regexp": "^1.7.0",
+    "eslint-plugin-sonarjs": "^0.13.0",
     "husky": "^8.0.1",
     "ngrok": "^4.3.1",
     "node-fetch": "^3.2.6",
