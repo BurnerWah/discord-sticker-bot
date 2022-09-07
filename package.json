@@ -9,7 +9,7 @@
     "lint": "concurrently 'npm:lint:*'",
     "lint:eslint": "eslint --max-warnings=0 src",
     "lint:prettier": "prettier --check '*.{json,js}' 'src/**/*.{js,ts}'",
-    "prepare": "husky install"
+    "prepare": "is-ci || husky install"
   },
   "dependencies": {
     "discord-interactions": "^3.2.0",
@@ -29,6 +29,8 @@
     "eslint-plugin-regexp": "^1.8.0",
     "eslint-plugin-sonarjs": "^0.15.0",
     "husky": "^8.0.1",
+    "is-ci": "^3.0.1",
+    "lint-staged": "^13.0.3",
     "ngrok": "^4.3.3",
     "prettier": "^2.7.1",
     "ts-node": "^10.9.1",
