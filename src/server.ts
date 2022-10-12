@@ -1,3 +1,4 @@
+import { sentry } from '@honojs/sentry'
 import { InteractionResponseType, InteractionType } from 'discord-interactions'
 import { Context, Hono } from 'hono'
 import { logger } from 'hono/logger'
@@ -7,7 +8,7 @@ import { HonoEnv, Interaction } from './types'
 
 const app = new Hono<HonoEnv>()
 
-app.use('*', logger())
+app.use('*', logger(), sentry())
 
 // Note - In Production builds, this endpoint will just redirect to a rickroll
 app.get('/register', registerEndpoint)
