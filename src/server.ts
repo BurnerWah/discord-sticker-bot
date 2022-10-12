@@ -1,13 +1,13 @@
 import { InteractionResponseType, InteractionType } from 'discord-interactions'
-import { Context, Env, Hono } from 'hono'
+import { Context, Hono } from 'hono'
 import { logger } from 'hono/logger'
 import commands from './commands'
 import { registerEndpoint } from './registerEndpoint'
-import { Interaction } from './types'
+import { HonoEnv, Interaction } from './types'
 
-const app = new Hono()
+const app = new Hono<HonoEnv>()
 
-app.use(logger())
+app.use('*', logger())
 
 // Note - In Production builds, this endpoint will just redirect to a rickroll
 app.get('/register', registerEndpoint)
@@ -16,7 +16,7 @@ app.get('*', async (ctx) => {
   return ctx.text(`Hello World!`)
 })
 
-app.post('/', async (ctx: Context<string, Env>) => {
+app.post('/', async (ctx: Context<string, HonoEnv>) => {
   const interaction: Interaction = await ctx.req.json()
   const { type, data } = interaction
 

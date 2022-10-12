@@ -2,15 +2,15 @@ import {
   InteractionResponseFlags,
   InteractionResponseType,
 } from 'discord-interactions'
-import { Context, Env } from 'hono'
-import { Interaction } from './types'
+import { Context } from 'hono'
+import { HonoEnv, Interaction } from './types'
 
 function normalize(str: string): string {
   return str.toLowerCase().trim().replaceAll(/\s+/g, '-')
 }
 
 export async function onStickerCommand(
-  ctx: Context<string, Env>,
+  ctx: Context<string, HonoEnv>,
   interaction: Interaction,
 ): Promise<Response> {
   const options = interaction.data?.options

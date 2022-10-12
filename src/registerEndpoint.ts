@@ -1,7 +1,8 @@
-import { Context, Env } from 'hono'
+import { Context } from 'hono'
 import { INVITE_COMMAND, STICKER_COMMAND } from './commands'
+import { HonoEnv } from './types'
 
-export async function registerEndpoint(ctx: Context<string, Env>) {
+export async function registerEndpoint(ctx: Context<string, HonoEnv>) {
   return ctx.redirect('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
   const { DISCORD_APPLICATION_ID, DISCORD_TOKEN } = ctx.env
   const url = `https://discord.com/api/v10/applications/${DISCORD_APPLICATION_ID}/commands`

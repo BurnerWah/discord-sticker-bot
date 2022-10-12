@@ -2,9 +2,10 @@ import {
   InteractionResponseFlags,
   InteractionResponseType,
 } from 'discord-interactions'
-import { Context, Env } from 'hono'
+import { Context } from 'hono'
+import { HonoEnv } from './types'
 
-export function onInviteCommand(ctx: Context<string, Env>) {
+export function onInviteCommand(ctx: Context<string, HonoEnv>) {
   const { DISCORD_APPLICATION_ID } = ctx.env
   const INVITE_URL = inviteUrl({
     client_id: DISCORD_APPLICATION_ID,
