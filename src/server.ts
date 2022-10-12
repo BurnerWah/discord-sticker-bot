@@ -12,7 +12,7 @@ app.use('*', logger())
 // Note - In Production builds, this endpoint will just redirect to a rickroll
 app.get('/register', registerEndpoint)
 
-app.get('*', async (ctx) => {
+app.get('*', (ctx) => {
   return ctx.text(`Hello World!`)
 })
 
