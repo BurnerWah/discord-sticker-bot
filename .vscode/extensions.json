@@ -6,6 +6,9 @@
     "bungcip.better-toml",
     "tamasfe.even-better-toml",
     "bengreenier.vscode-node-readme",
-    "christian-kohler.npm-intellisense"
+    "christian-kohler.npm-intellisense",
+    "cschleiden.vscode-github-actions",
+    "esbenp.prettier-vscode",
+    "redhat.vscode-yaml"
   ]
 }
