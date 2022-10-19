@@ -14,7 +14,7 @@
   "dependencies": {
     "@honojs/sentry": "^0.0.3",
     "discord-interactions": "^3.2.0",
-    "hono": "^2.0.9"
+    "hono": "^2.3.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.14.1",
