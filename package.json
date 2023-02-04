@@ -12,7 +12,7 @@
     "prepare": "is-ci || husky install"
   },
   "dependencies": {
-    "@honojs/sentry": "^0.0.5",
+    "@honojs/sentry": "^0.0.6",
     "discord-interactions": "^3.2.0",
     "hono": "^2.7.1"
   },
